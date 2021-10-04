@@ -59,7 +59,7 @@ object Practice {
 		println(s"Lowest repeated value: ${getLowestRepeated(mappings)} = ${mappings.get(getLowestRepeated(mappings)).getOrElse(-1)}");
 		println(s"Highest repeated value: ${getHighestRepeated(mappings)} = ${mappings.get(getHighestRepeated(mappings)).getOrElse(-1)}");
 		println(s"Least repeated value: ${getLeastRepeated(mappings)} = ${mappings.get(getLeastRepeated(mappings)).getOrElse(-1)}");
-        println(s"Most repeated value: ${getMostRepeated(mappings)} = ${mappings.get(getMostRepeated(mappings)).getOrElse(-1)}");
+		println(s"Most repeated value: ${getMostRepeated(mappings)} = ${mappings.get(getMostRepeated(mappings)).getOrElse(-1)}");
 	}
 	
 	def main(args: Array[String]) = {
