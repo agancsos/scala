@@ -30,9 +30,13 @@ This is the Python implemenation of the project as this is the quickest language
 1. Similar to Go, least repeated is based on the highest key with the least repeats.  This is technically not wrong, but can be offthrowing.
 2. Also as with Go, Most repeated in this case is also based on the highest key with the most repeats.  As the majority of the languages produce this result, this is considered the expected result.
 
+### Ruby
+This is the Ruby implemenation of the project as this is one of the languages to implement smaller projects.  Some key notes about this implementation include:
+1. It has a nifty way of sorting hashes, so we can get 100% accurate results.  
+2. Unlike with the other languages that depend on the internal sorting algorithm or a custom implementation, Ruby uses a lambda-like syntax for sort by a specific field.
 
 ## Retrospective
 1. The biggest issue I ran into is the results as each language has it's own implemenation of the sorting.  Ideally, I would implement my own algorithm to produce consistent results.
 2. Another qualm I had during the project is that Go doesn't have a native way of sorting Maps, more specifically key vs value.  If it wasn't for the comfort level, I would not recommend it with a time constraint.
-3. On an up note, I would say Python is the way to go if the role is of great interest.  Don't worry about using a compiled language, focus on an OOP language that gets the job done. 
+3. On an up note, I would say Python or Ruby are the way to go if the role is of great interest.  Don't worry about using a compiled language, focus on an OOP language that gets the job done. 
 
