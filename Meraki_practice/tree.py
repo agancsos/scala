@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 ###############################################################################
-# Name		  : tree.py													      #
-# Author	  : Abel Gancsos												  #
-# Version	  : v. 1.0.0.0													  #
-# Description : Practice working with binary search trees.					  #
+# Name        : tree.py                                                       #
+# Author      : Abel Gancsos                                                  #
+# Version     : v. 1.0.0.0                                                    #
+# Description : Practice working with binary search trees.                    #
 ###############################################################################
 import os, sys;
 
