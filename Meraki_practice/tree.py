@@ -18,14 +18,14 @@ class Tree:
 	root=None;
 	def __init__(self, children = []):
 		self.root = Node(Node(), Node(), None);
-		for child in children: self.insert_child(self.root, child);
+		for child in children: self.insert_child(self.root, int(child));
 		pass;
 	def insert_child(self, node=None, child=None):
 		inserted = False;
 		if node == None: node = self.root;
 		if (node.data == None): node.data = child; return True;
-		if (node.left == None and (node.right == None or node.right.data > child)): node.left = Node(Node(), Node(), child); return True;
-		if (node.right == None and (node.right == None or node.right.data < child)): node.right = Node(Node(), Node(), child); return True;
+		if (node.left == None and node.data > child): node.left = Node(Node(), Node(), child); return True;
+		if (node.right == None and node.data < child): node.right = Node(Node(), Node(), child); return True;
 		if not inserted and node.left != None: inserted = self.insert_child(node.left, child);
 		if not inserted and node.right != None: inserted = self.insert_child(node.right, child);
 		return inserted;

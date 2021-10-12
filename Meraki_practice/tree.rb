@@ -18,7 +18,7 @@ class Tree
 	def initialize(children=[])
 		@root = Node.new(Node.new(), Node.new(), nil);
 		children.each do |child|
-			self.add_child(@root, child);
+			self.add_child(@root, child.to_i);
 		end
 	end
 
@@ -29,11 +29,11 @@ class Tree
 			node.data= child;
 			return true;
 		end 
-		if (node.left == nil and (node.right == nil or node.right.data > child))
+		if (node.left == nil and node.data > child)
 			node.left = Node.new(Node.new(nil, nil, nil), Node.new(nil, nil, nil), child);
 			return true;
 		end
-		if (node.right == nil and (node.left == nil or node.left.data < child))
+		if (node.right == nil and node.data < child)
 			node.right = Node.new(Node.new(nil, nil, nil), Node.new(nil, nil, nil), child);
 			return true;
 		end
@@ -56,10 +56,10 @@ end
 class Driver
 	@tree=nil;@search=nil;
 	def initialize(params={})
-		children = params["--children"] if params["--children"] != nil;
+		children = params["--children"] == nil ? "10,4,3,2,1" : params["--children"];
 		throw "Children cannot be empty..." if children == nil;
 		@tree = Tree.new(children.split(","));
-		@search = params["-s"] if params["-s"] != nil;
+		@search = params["-s"] == nil ? 2 : params["-s"];
 		throw "Search cannot be empty..." if @search == nil;
 	end
 
