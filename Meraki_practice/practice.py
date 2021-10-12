@@ -26,16 +26,16 @@ class Practice:
 		return result;
 		pass;
 	def get_lowest_repeated(self):
-		sorted_map = sorted(self.mapping, key=lambda x:x);
+		sorted_map = sorted(self.mapping.keys(), key=lambda x:x);
 		return sorted_map[0];
 	def get_highest_repeated(self):
-		sorted_map = sorted(self.mapping, key=lambda x:x);
+		sorted_map = sorted(self.mapping.keys(), key=lambda x:x);
 		return sorted_map[len(sorted_map) - 1];
 	def get_least_repeated(self):
-		sorted_map = sorted(self.mapping, key=lambda x:self.mapping[x]);
+		sorted_map = sorted(self.mapping);
 		return sorted_map[0];
 	def get_most_repeated(self):
-		sorted_map = sorted(self.mapping, key=lambda x:self.mapping[x]);
+		sorted_map = sorted(self.mapping);
 		return sorted_map[len(sorted_map) - 1];
 	def invoke(self):
 		ip = "127.0.0.1";
