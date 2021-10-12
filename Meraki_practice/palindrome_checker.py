@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+###############################################################################
+# Name        : palindrome_checker.py                                         #
+# Author      : Abel Gancsos                                                  #
+# Version     : v. 1.0.0.0                                                    #
+# Description : Practice working with palindromes.                            #
+###############################################################################
 import os, sys;
 
 class PalindromeChecker:

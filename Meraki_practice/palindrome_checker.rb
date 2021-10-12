@@ -1,4 +1,10 @@
 #!/usr/bin/ruby
+###############################################################################
+# Name        : palindrome_checker.rb                                         #
+# Author      : Abel Gancsos                                                  #
+# Version     : v. 1.0.0.0                                                    #
+# Description : Practice working with palindromes.                            #
+###############################################################################
 
 class PalindromeChecker
 	@file_path=nil;@text=nil;

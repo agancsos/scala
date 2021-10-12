@@ -1,4 +1,10 @@
 #!/usr/bin/ruby
+###############################################################################
+# Name        : rest.rb                                                       #
+# Author      : Abel Gancsos                                                  #
+# Version     : v. 1.0.0.0                                                    #
+# Description : Practice working with REST.                                   #
+###############################################################################
 require "uri";
 require "net/http";
 

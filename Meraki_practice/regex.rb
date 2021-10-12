@@ -1,4 +1,10 @@
 #!/usr/bin/ruby
+###############################################################################
+# Name        : regex.rb                                                      #
+# Author      : Abel Gancsos                                                  #
+# Version     : v. 1.0.0.0                                                    #
+# Description : Practice working with regex.                                  #
+###############################################################################
 
 class Matcher
 	@text=nil;@search=nil;
