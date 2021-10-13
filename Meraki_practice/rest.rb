@@ -37,9 +37,9 @@ class Rester
 	end
 
 	def invoke_get(endpoint, headers)
-		req = Net::HTTP::Get.new(URI(@endpoint));
-		for k in @headers.keys
-			req[k] = @headers[k];
+		req = Net::HTTP::Get.new(URI(endpoint));
+		for k in headers.keys
+			req[k] = headers[k];
 		end
 		rsp = Net::HTTP.start(req.uri.host, :use_ssl => req.uri.scheme == 'https') do |http|
 			http.request(req)
@@ -48,10 +48,10 @@ class Rester
 	end
 
 	def invoke_post(endpoint, headers, body)
-		req = Net::HTTP::Post.new(URI(@endpoint));
+		req = Net::HTTP::Post.new(URI(endpoint));
 		req.body = "#{body}";
-		for k in @headers.keys
-			req[k] = @headers[k];
+		for k in headers.keys
+			req[k] = headers[k];
 		end
 		rsp = Net::HTTP.start(req.uri.host, :use_ssl => req.uri.scheme == 'https') do |http|
 			http.request(req)
