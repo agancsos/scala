@@ -20,15 +20,8 @@ class Practice
 	def convert_to_binary(value)
 		result = "";
 		for part in value.split(".")
-			buff = "";
-			if (result != "") 
-				result += "."; 
-			end
-			while (part.to_i % 2 != 0)
-				buff += "#{part.to_i % 2}";
-				part = part.to_i / 2;
-			end
-			result += buff != "" ? buff.reverse.rjust(8, "0") : "0".rjust(8, "0");		
+			result += "." if result != "";
+			result += part.to_i.to_s(2).rjust(8, "0");
 		end
 		return result;
 	end

@@ -17,12 +17,8 @@ class Practice:
 	def convert_to_binary(self, value):
 		result = "";
 		for part in value.split("."):
-			buff = "";
 			if (result != ""): result += ".";
-			while (int(part) % 2 != 0):
-				buff += "{0}".format(int(part) % 2);
-				part = int(part) / 2;
-			result += (buff[::-1] if buff != "" else "0").rjust(8, "0");
+			result += bin(int(part)).replace("b", "").rjust(8, "0");
 		return result;
 		pass;
 	def get_lowest_repeated(self):
