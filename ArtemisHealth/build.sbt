@@ -1,4 +1,5 @@
 
+fork := true
 mainClass in Global := Some("com.artemis.Main")
 
 lazy val root = (project in file(".")).
