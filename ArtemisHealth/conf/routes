@@ -1,0 +1,1 @@
+GET     /api/list                           controllers.RestService.list()
