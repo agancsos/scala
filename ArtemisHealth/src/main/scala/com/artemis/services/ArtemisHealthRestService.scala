@@ -25,11 +25,13 @@ class ArtemisHealthRestService(registry: ActorRef[ArtemisHealthRegistry.Command]
 		pathPrefix("api") {
 			concat(
 				pathEnd {
+					concat(
 					get {
 						complete(getWelcome());
-					}
+					})
 				},
 				path(Segment) { operation =>
+					concat(
 					get {
 						operation match {
 							case "hello" => complete(helloWorld());
@@ -45,7 +47,7 @@ class ArtemisHealthRestService(registry: ActorRef[ArtemisHealthRegistry.Command]
 								}
 							case whoa => complete(Result("Invalid operation..."));
 						}
-					}
+					})
 				}
 			)
 		}
