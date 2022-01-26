@@ -26,28 +26,30 @@ class ArtemisHealthRestService(registry: ActorRef[ArtemisHealthRegistry.Command]
 			concat(
 				pathEnd {
 					concat(
-					get {
-						complete(getWelcome());
-					})
+						get {
+							complete(getWelcome());
+						}
+					)
 				},
 				path(Segment) { operation =>
 					concat(
-					get {
-						operation match {
-							case "hello" => complete(helloWorld());
-							case "tables" => complete(getTables());
-							case whoa => complete(Result("Invalid operation..."));
+						get {
+							operation match {
+								case "hello" => complete(helloWorld());
+								case "tables" => complete(getTables());
+								case whoa => complete(Result("Invalid operation..."));
+							}
+						},
+						post {
+							operation match {
+								case "tables" => 
+									entity(as[Result]) { r =>
+										complete(receiveResult(r));
+									}
+								case whoa => complete(Result("Invalid operation..."));
+							}
 						}
-					},
-					post {
-						operation match {
-							case "tables" => 
-								entity(as[Result]) { r =>
-									complete(receiveResult(r));
-								}
-							case whoa => complete(Result("Invalid operation..."));
-						}
-					})
+					)
 				}
 			)
 		}
