@@ -40,7 +40,7 @@ Simply prints a welcome message.  Mostly to test the application framework.
 Connects to a local PostgreSQL database and prints the user's tables.  Mostly to demonstrate ability to use JDBC in a Java/Scala application.
 
 ##### basic-socket
-Opens a socket and listens to incoming messages, which are then printed to the console.  This is a personal component as it came up in previous interviews, which I didn't so so well.
+Opens a socket and listens to incoming messages, which are then printed to the console.  This is a personal component as it came up in previous interviews, which I didn't do so well.
 
 ### Flags
 |Flag|Description|
