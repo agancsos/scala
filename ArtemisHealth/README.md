@@ -98,7 +98,7 @@ curl http://localhost:8082/api/tables
 
 ## Retrospective
 
-* Although a complete pain to configure at first, Play/AKKA are actually very nice and simple frameworks for building REST services.
+* Although a little different to configure at first, Play/AKKA are actually very nice and simple frameworks for building REST services.
 
 ## Closing thoughts
 * The only reason it might be difficult to configure at first is because the frameworks are designed to be used with SBT, which I was trying to avoid.
