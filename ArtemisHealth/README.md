@@ -1,5 +1,7 @@
 # Artemis Health Preparation
 
+![Alt ""](https://cdn.newswire.com/files/x/69/25/9cf90e667e7388dc27331466a68c.png "Artemis Health")
+
 ## Synopsis
 Small tool to help prepare for the Artemis Health interview.  Samples include simple Scala operations, database operations, and socket operations.
 
